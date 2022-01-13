@@ -3,40 +3,56 @@
 
 
 body{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-    background-image: linear-gradient(to right, #00C1FE, #FAFFC1 );
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+background: linear-gradient(to right, #00C1FE, #FAFFC1  )  !important;
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 .form-container{
-     margin-top: 80px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px 0px #000;
-    width: 400px;
+margin-top: 50px;
+background-color: white;
+padding: 30px;
+border-radius: 10px;
+width: 475px;
+  
 }
 .row{
-    justify-content: center;
+justify-content: center;
+margin-right: 250px !important;
 }
 .container-fluid h1{
-   font-size: 32px;
-   font-weight: 700;
-   border-left:#00C1FE solid 5px ;
-  padding-left: 10px;
-  margin-bottom: 30px;
+font-size: 32px;
+font-weight: 700;
+border-left:#00C1FE solid 5px ;
+padding-left: 10px;
+margin-left: 20px;
+margin-bottom: 30px;
 }
-.container-fluid h3{
-    font-size: 22px;
-    font-weight: 600; 
-    text-align: center;
-    margin-bottom: 10px;
-    
+.container-fluid h2{
+font-size: 22px;
+font-weight: 600; 
+text-align: center;
+margin-bottom: 10px;
  }
  .container-fluid P{
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 30px;
+font-size: 14px;
+font-weight: 400;
+text-align: center;
  }
+ .p1{
+ margin-bottom: 30px;
+ }
+ .btn{
+margin-top:30px ;
+background-color: #00C1FE !important;
+ }
+.p2{
+ margin-top:20px ;
+}
+.p2 span{
+color: #00C1FE;
+text-decoration:#00C1FE  underline;
+}
