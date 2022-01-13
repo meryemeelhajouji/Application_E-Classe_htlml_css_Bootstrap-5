@@ -1,0 +1,32 @@
+
+
+
+
+.row aside{
+    background: #FAFFC1;
+}
+#logo{
+ font-size: 25px;
+font-weight: 700;
+border-left:#00C1FE solid 5px ;
+padding-left: 10px;
+
+}
+.nav-item a{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Montserrat;
+}
+h4{
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: Montserrat; 
+}
+h5{
+    color:#00C1FE !important;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Montserrat; 
+}
