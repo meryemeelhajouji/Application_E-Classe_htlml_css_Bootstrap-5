@@ -1,7 +1,4 @@
 
-
-
-
 body{
 margin: 0;
 padding: 0;
@@ -16,28 +13,26 @@ margin-top: 50px;
 background-color: white;
 padding: 30px;
 border-radius: 10px;
-width: 475px;
-  
+width: 450px;
 }
 .row{
-justify-content: center;
 margin-right: 250px !important;
 }
-.container-fluid h1{
-font-size: 32px;
+.h2{
+font-size: 32px; 
 font-weight: 700;
 border-left:#00C1FE solid 5px ;
 padding-left: 10px;
 margin-left: 20px;
 margin-bottom: 30px;
 }
-.container-fluid h2{
+.h4{
 font-size: 22px;
 font-weight: 600; 
 text-align: center;
 margin-bottom: 10px;
  }
- .container-fluid P{
+ .container P{
 font-size: 14px;
 font-weight: 400;
 text-align: center;
