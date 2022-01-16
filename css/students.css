@@ -6,6 +6,9 @@
   .bg {
     background:  #FAFFC1;
   }
+  .bg_content{
+      background: #E5E5E5;;
+  }
   .rounded-full {
     border-radius: 100%;
   }
@@ -32,7 +35,7 @@
   }
   
   #page-content-wrapper {
-    min-width: 50%;
+    min-width: 100%;
   }
   
   #wrapper.toggled #sidebar-wrapper {
@@ -48,35 +51,9 @@
     margin:0  30px;
   }
   
- .card_student{
-  background: #F0F9FF ;
+ td i{
+     color: #00C1FE ;
  }
- .card_student i{
-  color: #74C1ED ;
-
-  #EE95C5
- }
-.card_cours{
- background: #FEF6FB;
-}
-.card_cours i{
-  color:  #EE95C5;
- }
-.card_payment{
-  background: #FEFBEC;
- }
- .card_payment i{
-  color: #00C1FE;
- }
- .card_user{
-  background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
-
- }
- .card_user i {
-  color: white;
- }
- 
-  
   @media (min-width: 768px) {
     #sidebar-wrapper {
       margin-left: 0;
