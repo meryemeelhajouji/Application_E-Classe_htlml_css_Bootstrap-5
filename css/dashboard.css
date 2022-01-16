@@ -46,3 +46,9 @@ background:#00C1FE ;
     font-family: Montserrat;
     margin-top: 20px;
 }
+.content{
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
