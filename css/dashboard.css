@@ -17,7 +17,7 @@
     width: 240px;
   }
  #page-content-dashboard {
-    min-width: 50%;
+    min-width: 100%;
   }
   #dashboard.toggled #sidebar-dashboard {
     margin-left: 0;
