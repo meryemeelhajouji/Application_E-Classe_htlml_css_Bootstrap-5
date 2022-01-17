@@ -1,60 +1,37 @@
 
-  .second-text {
-    color: black;
-    font-size: 14px;
-  }
-  .bg {
-    background:  #FAFFC1;
-  }
-  .rounded-full {
-    border-radius: 100%;
-  }
-    #wrapper {
-    overflow-x: hidden;
-  }
-  
-  #sidebar-wrapper {
-    min-height: 100%;
-    margin-left: -240px;
-  }
-  
-
- .profile{
-    width: 120px;
-    height: 120px;
-
+.bg {
+   background:  #FAFFC1;
+}
+#sidebar-dashboard {
+  min-height: 100%;
+  margin-left: -240px;
+}
+.profile{
+   width: 120px;
+   height: 120px;
  }
  .list-group a:hover{
      background: #00C1FE !important;
  }  
-  #sidebar-wrapper .list-group {
+ #sidebar-dashboard .list-group {
     width: 240px;
   }
-  
-  #page-content-wrapper {
+ #page-content-dashboard {
     min-width: 50%;
   }
-  
-  #wrapper.toggled #sidebar-wrapper {
+  #dashboard.toggled #sidebar-dashboard {
     margin-left: 0;
   }
-  
   #menu-toggle {
     cursor: pointer;
   }
-  
-  .list-group-item {
-    border: none;
-    margin:0  30px;
-  }
+ /*page dashboard*/
   
  .card_student{
   background: #F0F9FF ;
  }
  .card_student i{
   color: #74C1ED ;
-
-  #EE95C5
  }
 .card_cours{
  background: #FEF6FB;
@@ -70,24 +47,27 @@
  }
  .card_user{
   background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
-
  }
  .card_user i {
   color: white;
  }
  
-  
+ /* page student */
+ td i{
+  color: #00C1FE ;
+}
+ 
   @media (min-width: 768px) {
-    #sidebar-wrapper {
+    #sidebar-dashboard {
       margin-left: 0;
     }
   
-    #page-content-wrapper {
+    #page-content-dashboard {
       min-width: 0;
       width: 100%;
     }
   
-    #wrapper.toggled #sidebar-wrapper {
+    #dashboard.toggled #sidebar-dashboard {
       margin-left: -240px;
     }
   }
