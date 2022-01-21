@@ -22,10 +22,7 @@
             <h2 class="text-uppercase fs-5">sign in </h2>
             <p class=" text-muted login_description"> Enter your credentials to access your account</p>
           </div>
-        
-    
            <form >
-         
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email </label>
             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Entre your email">
@@ -34,7 +31,7 @@
             <label for="exampleInputPassword1" class="form-label">Password</label>
             <input type="password" class="form-control mb-4" placeholder="Entre your password" id="exampleInputPassword1">
           </div>
-          <button type="button" onclick="window.location.href='dashboard.html';" class="btn  btn-info w-100 text-white text-uppercase  "> 
+          <button type="button" onclick="window.location.href='dashboard.php';" class="btn  btn-info w-100 text-white text-uppercase  "> 
             sign in
           </button>
           <div class="mt-3 text-center">
@@ -43,17 +40,10 @@
             </span>
              <a class="text-info text-decoration-underline" href=""> <span>Reset Password</span></a> 
           </div>
-         
         </form>
-
       </div>
     </div>
   </main>
-   
- 
-
- 
-
 </body>
 
 </html>
