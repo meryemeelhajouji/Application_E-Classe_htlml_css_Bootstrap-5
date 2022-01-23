@@ -36,7 +36,7 @@
                                     <th> </th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Phonne</th>
+                                    <th>Phone</th>
                                     <th>Enroll Number</th>
                                     <th>Date of admission</th>
                                     <th></th>
@@ -44,56 +44,48 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                    <td>username</td>
-                                    <td>user@email.com</td>
-                                    <td>7305477760</td>
-                                    <td>1234567305477760</td>
-                                    <td>08-Dec, 2021</td>
-                                    <td> <i class="fas fa-pen mx-4 "></i></td>
-                                    <td> <i class="fas fa-trash  "></i></td>
-                                </tr>
-                                <tr>
-                                    <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                    <td>username</td>
-                                    <td>user@email.com</td>
-                                    <td>7305477760</td>
-                                    <td>1234567305477760</td>
-                                    <td>08-Dec, 2021</td>
-                                    <td> <i class="fas fa-pen mx-4 "></i></td>
-                                    <td> <i class="fas fa-trash  "></i></td>
-                                </tr>
-                                <tr>
-                                    <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                    <td>username</td>
-                                    <td>user@email.com</td>
-                                    <td>7305477760</td>
-                                    <td>1234567305477760</td>
-                                    <td>08-Dec, 2021</td>
-                                    <td> <i class="fas fa-pen mx-4 "></i></td>
-                                    <td> <i class="fas fa-trash  "></i></td>
-                                </tr>
-                                <tr>
-                                    <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                    <td>username</td>
-                                    <td>user@email.com</td>
-                                    <td>7305477760</td>
-                                    <td>1234567305477760</td>
-                                    <td>08-Dec, 2021</td>
-                                    <td> <i class="fas fa-pen mx-4 "></i></td>
-                                    <td> <i class="fas fa-trash  "></i></td>
-                                </tr>
-                                <tr>
-                                    <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                    <td>username</td>
-                                    <td>user@email.com</td>
-                                    <td>7305477760</td>
-                                    <td>1234567305477760</td>
-                                    <td>08-Dec, 2021</td>
-                                    <td> <i class="fas fa-pen mx-4 "></i></td>
-                                    <td> <i class="fas fa-trash  "></i></td>
-                                </tr>
+                               <?php
+                              for($i=0;$i<15;$i++){
+                                $student []=[  
+                                  'img'=>'<img src="image/user.jpg" alt="user" style="width: 50px;">',
+                                  'Name'  =>'Uername',
+                                  'Email' =>'user@gmail.com',
+                                  'Phone' =>'12333445'.$i++,
+                                  'Enroll Number' =>'123456789'.$i,
+                                  'Date of admission' =>'08-DEC,2021',
+                                  'icon1'=>' <i class="fas fa-pen mx-4 "></i>',
+                                   'icon2'=>' <i class="fas fa-trash  "></i>',
+                           
+                                
+                              
+                              
+                          
+                                ];
+                          
+                              }
+                          
+                          
+                          
+                           
+                             foreach($student as $student){
+                                 echo"<tr>   
+                               
+                                 <td>".$student['img']."</td>
+                                 <td>".$student['Name'] ."</td>
+                                 <td>". $student['Email']."</td>
+                                 <td>".$student['Phone']."</td>
+                                 <td>".$student['Enroll Number']."</td>
+                                 <td>".$student['Date of admission']."</td>
+                                 <td>".$student['icon1']."</td>
+                                 <td>".$student['icon2']."</td>
+                              
+                                 </tr>";
+                              }
+
+
+
+                                ?>
+                             
                             </tbody>
                         </table>
                     </div>
