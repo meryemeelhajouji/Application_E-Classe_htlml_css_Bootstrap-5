@@ -40,51 +40,40 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td> Karthi</td>
-                                    <td>First</td>
-                                    <td>00012223</td>
-                                    <td>DHS 100,000</td>
-                                    <td>DHS 500,000</td>
-                                    <td>05-Jan, 2022</td>
-                                    <td> <i class="far fa-eye"></i></td>
-                                </tr>
-                                <tr>
-                                    <td> Karthi</td>
-                                    <td>First</td>
-                                    <td>00012223</td>
-                                    <td>DHS 100,000</td>
-                                    <td>DHS 500,000</td>
-                                    <td>05-Jan, 2022</td>
-                                    <td> <i class="far fa-eye"></i></td>
-                                </tr>
-                                <tr>
-                                    <td> Karthi</td>
-                                    <td>First</td>
-                                    <td>00012223</td>
-                                    <td>DHS 100,000</td>
-                                    <td>DHS 500,000</td>
-                                    <td>05-Jan, 2022</td>
-                                    <td> <i class="far fa-eye"></i></td>
-                                </tr>
-                                <tr>
-                                    <td> Karthi</td>
-                                    <td>First</td>
-                                    <td>00012223</td>
-                                    <td>DHS 100,000</td>
-                                    <td>DHS 500,000</td>
-                                    <td>05-Jan, 2022</td>
-                                    <td> <i class="far fa-eye"></i></td>
-                                </tr>
-                                <tr>
-                                    <td> Karthi</td>
-                                    <td>First</td>
-                                    <td>00012223</td>
-                                    <td>DHS 100,000</td>
-                                    <td>DHS 500,000</td>
-                                    <td>05-Jan, 2022</td>
-                                    <td> <i class="far fa-eye"></i></td>
-                                </tr>
+                            
+                                <?php
+
+                              for($i=0;$i<8;$i++){
+                                $student []=[ 
+                                  'Name'  =>'Karthime',
+                                  'Payment Schedule' =>'First',
+                                  'Bill Number' =>'00012223',
+                                  'Amount Paid' =>'DHS 100,000',
+                                  'Balance amount' =>'DHS 500,000',
+                                  'Date'=>'05-Jan, 2022',
+                                   'icon'=>'<i class="far fa-eye"></i>',
+                           
+     
+                                ];
+                          
+                              }
+                          
+           
+                             foreach($student as $student){
+                                 echo"<tr>  
+
+                                 <td>".$student['Name'] ."</td>
+                                 <td>". $student['Payment Schedule']."</td>
+                                 <td>".$student['Bill Number']."</td>
+                                 <td>".$student['Amount Paid']."</td>
+                                 <td>".$student['Balance amount']."</td>
+                                 <td>".$student['Date']."</td>
+                                 <td>".$student['icon']."</td>
+                              
+                                 </tr>";
+                              }
+
+                                ?>
                             </tbody>
                         </table>
                     </div>
