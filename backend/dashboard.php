@@ -14,11 +14,11 @@
     <main>
           <div class="d-flex" id="dashboard">
            
-             <?php include 'Sidebar.php'?>
+             <?php include 'includes/Sidebar.html'?>
 
             <div id="page-content-dashboard">
           
-                <?php include 'Header.php'?>
+                <?php include 'includes/Header.html'?>
 
                  <div class="container-fluid px-4">
                 <div class="row my-2 d-flex justify-content-center">
