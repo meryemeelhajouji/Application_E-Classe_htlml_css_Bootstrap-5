@@ -9,19 +9,22 @@
                     <h6> Admin name </h6>
                     <span class=" fs-6 text-info">Admin</span>
                 </div>
-                <a href="dashboard.php" class="list-group-item mx-5 border-0  bg-info rounded-3 mt-3 ">
+                <a href="dashboard.php" class="list-group-item mx-5 border-0   rounded-3 mt-3
+                 <?php if( basename($_SERVER['REQUEST_URI'])=="dashboard.php"){ echo "bg-info";}else{echo"bg-transparent";};?> ">
                     <i class="fas fa-home"></i> Home</a>
                 <a href="dashboard.php" class="list-group-item mx-5 border-0 bg-transparent ">
                     <i class="far fa-bookmark"></i> Course </a>
-                <a href="students.php" class="list-group-item mx-5 border-0 bg-transparent  ">
+                <a href="students.php" class="list-group-item mx-5 border-0
+                 <?php if( basename($_SERVER['REQUEST_URI'])=="students.php"){ echo "bg-info";}else{echo"bg-transparent";};?> ">
                     <i class="fas fa-graduation-cap"></i> Students</a>
-                <a href="payment.php" class="list-group-item mx-5 border-0 bg-transparent ">
+                <a href="payment.php" class="list-group-item mx-5 border-0
+                 <?php if( basename($_SERVER['REQUEST_URI'])=="payment.php"){ echo "bg-info";}else{echo"bg-transparent";};?> ">
                     <i class="fas fa-dollar-sign "></i> Payment </a>
                 <a href="#" class="list-group-item mx-5 border-0 bg-transparent ">
                     <i class="far fa-file-alt"></i> Report </a>
                 <a href="#" class="list-group-item mx-5 border-0 bg-transparent ">
                     <i class="fas fa-sliders-h"></i> Settings</a>
-                <a href="index.php" class="list-group-item mx-5 border-0 bg-transparent  mt-5 mb-2 ">
+                <a href="index.php" class="list-group-item mx-5 border-0   mt-5 mb-2 bg-transparent ">
                     Logout <i class="fas fa-sign-out-alt"></i> </a>
             </div>
         </div>

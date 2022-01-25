@@ -14,13 +14,13 @@
     <main>
           <div class="d-flex" id="dashboard">
            
-             <?php include 'includes/Sidebar.html'?>
+             <?php include 'includes/Sidebar.php'?>
 
             <div id="page-content-dashboard">
           
-                <?php include 'includes/Header.html'?>
+                <?php include 'includes/Header.php'?>
 
-                 <div class="container-fluid px-4">
+                 <div class=" px-4">
                 <div class="row my-2 d-flex justify-content-center">
                     <div class="col-lg-3 col-md-5 mb-4 ">
                         <div class="p-3  shadow-sm d-flex justify-content-around align-items-center card_student ">

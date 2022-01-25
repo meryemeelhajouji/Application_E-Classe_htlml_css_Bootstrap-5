@@ -1,5 +1,5 @@
-<header class="navbar navbar-expand-lg navbar-light  py-1 px-4">
-                <div class="d-flex align-items-center">
+<nav  class="navbar navbar-expand-lg navbar-light  py-1 px-4">
+                <div class="d-flex">
                     <i class="fas fa-chevron-circle-left  me-3" id="menu-toggle"></i>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
@@ -8,7 +8,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <div class="navbar-nav ms-auto">
-                        <div class="nav-item dropdown">
+                        <div class="nav-item ">
                             <form class="d-flex  justify-content-end mt-3 ">
                                 <input class="form-control me-2 " type="search" placeholder="Search..."
                                     aria-label="Search">
@@ -17,4 +17,4 @@
                         </div>
                     </div>
                 </div>
-            </header>
+</nav>

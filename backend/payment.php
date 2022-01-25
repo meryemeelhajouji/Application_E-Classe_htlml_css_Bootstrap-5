@@ -14,11 +14,11 @@
     <main>
     <div class="d-flex" id="dashboard">
            
-           <?php include 'includes/Sidebar.html'?>
+           <?php include 'includes/Sidebar.php'?>
 
            <div id="page-content-dashboard">
 
-                  <?php include 'includes/Header.html'?>
+                  <?php include 'includes/Header.php'?>
 
                 <div class="container-fluid bg-light  px-4">
                  <div class="row ">
@@ -43,32 +43,32 @@
                             
                                 <?php
 
-                              for($i=0;$i<8;$i++){
-                                $student []=[ 
+                             
+                                $payment =array( 
                                   'Name'  =>'Karthime',
                                   'Payment Schedule' =>'First',
                                   'Bill Number' =>'00012223',
                                   'Amount Paid' =>'DHS 100,000',
                                   'Balance amount' =>'DHS 500,000',
                                   'Date'=>'05-Jan, 2022',
-                                   'icon'=>'<i class="far fa-eye"></i>',
+                                   'icon'=>'<i class="far fa-eye"></i>'
                            
      
-                                ];
+                                );
                           
-                              }
+                            
                           
            
-                             foreach($student as $student){
+                                for($i=0;$i<8;$i++){
                                  echo"<tr>  
 
-                                 <td>".$student['Name'] ."</td>
-                                 <td>". $student['Payment Schedule']."</td>
-                                 <td>".$student['Bill Number']."</td>
-                                 <td>".$student['Amount Paid']."</td>
-                                 <td>".$student['Balance amount']."</td>
-                                 <td>".$student['Date']."</td>
-                                 <td>".$student['icon']."</td>
+                                 <td>".$payment['Name'] ."</td>
+                                 <td>". $payment['Payment Schedule']."</td>
+                                 <td>".$payment['Bill Number']."</td>
+                                 <td>".$payment['Amount Paid']."</td>
+                                 <td>".$payment['Balance amount']."</td>
+                                 <td>".$payment['Date']."</td>
+                                 <td>".$payment['icon']."</td>
                               
                                  </tr>";
                               }

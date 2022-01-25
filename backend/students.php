@@ -14,11 +14,11 @@
     <main>
     <div class="d-flex" id="dashboard">
 
-        <?php include 'includes/Sidebar.html'?>
+        <?php include 'includes/Sidebar.php'?>
 
          <div id="page-content-dashboard">
 
-             <?php include 'includes/Header.html'?>
+             <?php include 'includes/Header.php'?>
   
              <div class="container-fluid bg-light  px-4">
                 <div class="row ">
@@ -45,29 +45,26 @@
                             </thead>
                             <tbody>
                                <?php
-                              for($i=0;$i<15;$i++){
-                                $student []=[  
+                             
+                                $student =array( 
                                   'img'=>'<img src="image/user.jpg" alt="user" style="width: 50px;">',
                                   'Name'  =>'Uername',
                                   'Email' =>'user@gmail.com',
-                                  'Phone' =>'12333445'.$i++,
-                                  'Enroll Number' =>'123456789'.$i,
+                                  'Phone' =>'12333445',
+                                  'Enroll Number' =>'123456789',
                                   'Date of admission' =>'08-DEC,2021',
                                   'icon1'=>' <i class="fas fa-pen mx-4 "></i>',
-                                   'icon2'=>' <i class="fas fa-trash  "></i>',
+                                   'icon2'=>' <i class="fas fa-trash  "></i>'
                            
-                                
-                              
-                              
+                               
                           
-                                ];
+                                );
                           
-                              }
                           
                           
                           
                            
-                             foreach($student as $student){
+                                for($i=0;$i<8;$i++){
                                  echo"<tr>   
                                
                                  <td>".$student['img']."</td>
