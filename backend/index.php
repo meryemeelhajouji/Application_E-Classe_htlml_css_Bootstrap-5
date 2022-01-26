@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+ <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign in</title>
   <link rel="stylesheet" href="css/sign_in.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+ </head>
     
 <body>
   <main>
@@ -22,7 +23,7 @@
             <h2 class="text-uppercase fs-5">sign in </h2>
             <p class=" text-muted login_description"> Enter your credentials to access your account</p>
           </div>
-           <form >
+           <form  action="dashboard.php">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email </label>
             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Entre your email">
@@ -31,7 +32,7 @@
             <label for="exampleInputPassword1" class="form-label">Password</label>
             <input type="password" class="form-control mb-4" placeholder="Entre your password" id="exampleInputPassword1">
           </div>
-          <button type="button" onclick="window.location.href='dashboard.php';" class="btn  btn-info w-100 text-white text-uppercase  "> 
+          <button type="submit"class="btn  btn-info w-100 text-white text-uppercase  "> 
             sign in
           </button>
           <div class="mt-3 text-center">

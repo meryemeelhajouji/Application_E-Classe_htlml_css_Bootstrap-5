@@ -54,16 +54,10 @@
                                   'Enroll Number' =>'123456789',
                                   'Date of admission' =>'08-DEC,2021',
                                   'icon1'=>' <i class="fas fa-pen mx-4 "></i>',
-                                   'icon2'=>' <i class="fas fa-trash  "></i>'
-                           
-                               
+                                  'icon2'=>' <i class="fas fa-trash   mx-4 "></i>'
                           
                                 );
-                          
-                          
-                          
-                          
-                           
+
                                 for($i=0;$i<8;$i++){
                                  echo"<tr>   
                                
