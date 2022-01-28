@@ -12,7 +12,7 @@
                             <form class="d-flex  justify-content-end mt-3 ">
                                 <input class="form-control me-2 " type="search" placeholder="Search..."
                                     aria-label="Search">
-                                <i class="fas fa-bell  mt-2 ml-2"></i>
+                                <i class="fas fa-bell  mt-2 me-2"></i>
                             </form>
                         </div>
                     </div>

@@ -63,7 +63,7 @@
                                
                                  <td>".$student['img']."</td>
                                  <td>".$student['Name'] ."</td>
-                                 <td>". $student['Email']."</td>
+                                 <td>".$student['Email']."</td>
                                  <td>".$student['Phone']."</td>
                                  <td>".$student['Enroll Number']."</td>
                                  <td>".$student['Date of admission']."</td>

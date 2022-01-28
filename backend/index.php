@@ -21,7 +21,7 @@
           </div>
           <div class=" text-center ">
             <h2 class="text-uppercase fs-5">sign in </h2>
-            <p class=" text-muted login_description"> Enter your credentials to access your account</p>
+            <p class=" text-muted "> Enter your credentials to access your account</p>
           </div>
            <form  action="dashboard.php">
           <div class="mb-3">
