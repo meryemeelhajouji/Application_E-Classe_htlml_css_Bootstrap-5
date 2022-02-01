@@ -1,0 +1,79 @@
+
+
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+.bg {
+  background:  #FAFFC1;
+}
+#sidebar-dashboard {
+  min-height: 100%;
+  margin-left: -240px;
+}
+.profile{ 
+  width: 120px;
+  height: 120px;
+ }
+.list-group a:hover{
+   background: #00C1FE !important;
+ }  
+ #sidebar-dashboard .list-group {
+    width: 240px;
+  }
+ #page-content-dashboard {
+    min-width: 100%;
+  }
+ #dashboard.toggled #sidebar-dashboard {
+    margin-left: 0;
+  }
+ #menu-toggle {
+    cursor: pointer;
+  }
+ .card_student{
+   background: #F0F9FF ;
+ }
+ .card_student i{
+  color: #74C1ED ;
+ }
+.card_cours{
+  background: #FEF6FB;
+}
+.card_cours i{
+  color:  #EE95C5;
+ }
+.card_payment{
+  background: #FEFBEC;
+ }
+ .card_payment i{
+  color: #00C1FE;
+ }
+ .card_user{
+  background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
+ }
+ .card_user i {
+  color: white;
+ }
+ 
+ td i{
+  color: #00C1FE ;
+}
+ 
+  @media (min-width: 768px) {
+    #sidebar-dashboard {
+      margin-left: 0;
+    }
+  
+    #page-content-dashboard {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #dashboard.toggled #sidebar-dashboard {
+      margin-left: -240px;
+    }
+  }
+
+ 
