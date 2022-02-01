@@ -1,1 +1,22 @@
-[{"image":"profile.jpg","name":"A","email":"meryemelhajouji.99@gmail.com","phone":"94748923","Enroll_Number":"86324","Date_of_admission":"2022-03-02"},{"image":"profile.jpg","name":"aicha","email":"meryemelhajouji.99@gmail.com","phone":"94748923","Enroll_Number":"86324","Date_of_admission":"2022-02-18"},{"image":"profile.jpg","name":"aicha","email":"meryemelhajouji.99@gmail.com","phone":"94748923","Enroll_Number":"86324","Date_of_admission":"2022-02-18"},{"image":"profile.jpg","name":"aicha","email":"meryemelhajouji.99@gmail.com","phone":"94748923","Enroll_Number":"86324","Date_of_admission":"2022-02-18"},{"image":"profile.jpg","name":"aicha","email":"meryemelhajouji.99@gmail.com","phone":"94748923","Enroll_Number":"86324","Date_of_admission":"2022-02-18"}]
+[
+    {
+        "img": "",
+        "Name": "Meryeme",
+        "Email": "",
+        "Phone": "",
+        "Enroll Number": "",
+        "Date of admission": "",
+        "icon1": " <i class=\"fas fa-pen mx-4 \"><\/i>",
+        "icon2": " <i class=\"fas fa-trash   mx-4 \"><\/i>"
+    },
+    {
+        "img": "profile.jpg",
+        "Name": "aicha",
+        "Email": "meryemelhajouji.99@gmail.com",
+        "Phone": "",
+        "Enroll Number": "",
+        "Date of admission": "",
+        "icon1": " <i class=\"fas fa-pen mx-4 \"><\/i>",
+        "icon2": " <i class=\"fas fa-trash   mx-4 \"><\/i>"
+    }
+]

@@ -1,3 +1,26 @@
+<?php  
+        $json = file_get_contents('student.json');
+        $student = json_decode($json, true);
+  
+  $student[] = array(
+    'img'   =>$_GET["image"] ,
+    'Name'  => $_GET["name"] ,
+    'Email' =>$_GET["email"] ,
+    'Phone' =>$_GET["phone"] ,
+    'Enroll Number' =>$_GET["nb"] ,
+    'Date of admission' => $_GET["date"],
+    'icon1'=>' <i class="fas fa-pen mx-4 "></i>',
+    'icon2'=>' <i class="fas fa-trash   mx-4 "></i>'
+
+  );
+ 
+// push('student.json',$student);//
+
+  $en = json_encode($student,JSON_PRETTY_PRINT);
+  file_put_contents('student.json',$en);
+
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +60,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form  action= "" method="get">
+      <form  action= "students.php" method="get">
       <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Image </label>
             <input type="file" class="form-control" id="exampleInputEmail1" placeholder="Entre your image" name="image">
@@ -66,33 +89,6 @@
         <button type="submit" class="btn btn-primary">ADD NEW STUDENT</button>
         </form>
 
-  
-
-
-
-
-
-<?php
-$student = array();
-
-$student["image"] = $_GET["image"];
-$student["name"]  = $_GET["name"] ;
-$student["email"] = $_GET["email"];
-$student["phone"] = $_GET["phone"];
-$student["Enroll_Number"]  = $_GET["nb"];
-$student["Date_of_admission"] =  $_GET["date"];
-
-
-
-$st =file_get_contents("student.json");
-$st = json_decode($st,true);
-$st[] = $student ;
-$st = json_encode($st);
-file_put_contents("student.json",$st);
-
-// push('student.json',$student);//
-?>
-
       </div>
      
     </div>
@@ -116,31 +112,32 @@ file_put_contents("student.json",$st);
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php
+                               <?php
                               
                           
-                            $student =file_get_contents("student.json");
-                          $student = json_decode($student,true);
-                          for($i=0; $i<count($student); $i++):
+                            $fill =file_get_contents("student.json");
+                          $st = json_decode($fill,true);
 
-     
                               ?>
+                            <?php   foreach ($st as $key => $val) :    ?>
                            <tr>   
-                            
-                            <td><img src=" <?php echo "upload".$student[$i]['image']; ?>" alt="user" style="width: 50px;"></td>
-                            <td> <?php echo $student[$i]['name']; ?></td>
-                            <td> <?php echo $student[$i]['email'];?></td>
-                            <td> <?php echo $student[$i]['phone']; ?> </td>
-                            <td> <?php echo $student[$i]['Enroll_Number'];?></td>
-                            <td> <?php echo $student[$i]['Date_of_admission'];?></td>
-                            <td> <i class="fas fa-pen mx-4 "></i></td>
+                        
+                            <td><img src=" <?php echo "upload".$val['img']; ?>" alt="user" style="width: 50px;"></td>
+                            <td> <?php echo $val['Name']; ?></td>
+                            <td> <?php echo $val['Email'];?></td>
+                            <td> <?php echo $val['Phone']; ?> </td>
+                            <td> <?php echo $val['Enroll Number'];?></td>
+                            <td> <?php echo $val['Date of admission'];?></td>
+                            <td><i class="fas fa-pen mx-4 "></i></td>
                             <td> <i class="fas fa-trash   mx-4 "></i></td>
                          
                             </tr>
-                            <?php endfor; ?>
+                       
+            <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
+                      
                 </div>
             </div>
         </div>
