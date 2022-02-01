@@ -1,21 +1,11 @@
 [
     {
-        "img": "profile.jpg",
-        "Name": "Meryeme",
+        "img": "",
+        "Name": "Meryeme EL",
         "Email": "meryemelhajouji.99@gmail.com",
         "Phone": "94748923",
-        "Enroll Number": "2343",
-        "Date of admission": "2022-02-12",
-        "icon1": " <i class=\"fas fa-pen mx-4 \"><\/i>",
-        "icon2": " <i class=\"fas fa-trash   mx-4 \"><\/i>"
-    },
-    {
-        "img": "user.jpg",
-        "Name": "aicha",
-        "Email": "meryemelhajouji.99@gmail.com",
-        "Phone": "94748923",
-        "Enroll Number": "86324",
-        "Date of admission": "2022-02-17",
+        "Enroll Number": "6647",
+        "Date of admission": "2022-02-24",
         "icon1": " <i class=\"fas fa-pen mx-4 \"><\/i>",
         "icon2": " <i class=\"fas fa-trash   mx-4 \"><\/i>"
     }

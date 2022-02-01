@@ -1,15 +1,15 @@
 <?php 
- if(isset($_GET['save'])) { 
+ if(isset($_POST['save'])) { 
         $json = file_get_contents('student.json');
         $student = json_decode($json, true);
   
   $student[] = array(
-    'img'   =>$_GET["image"] ,
-    'Name'  => $_GET["name"] ,
-    'Email' =>$_GET["email"] ,
-    'Phone' =>$_GET["phone"] ,
-    'Enroll Number' =>$_GET["nb"] ,
-    'Date of admission' => $_GET["date"],
+    'img'   =>$_POST["image"] ,
+    'Name'  => $_POST["name"] ,
+    'Email' =>$_POST["email"] ,
+    'Phone' =>$_POST["phone"] ,
+    'Enroll Number' =>$_POST["nb"] ,
+    'Date of admission' => $_POST["date"],
     'icon1'=>' <i class="fas fa-pen mx-4 "></i>',
     'icon2'=>' <i class="fas fa-trash   mx-4 "></i>'
 
@@ -57,11 +57,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter student</h5>
+        <h5 class="modal-title" id="exampleModalLabel">ADD NEW STUDENT</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form  action= "" method="get">
+      <form  action= "" method="POST">
       <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Image </label>
             <input type="file" class="form-control" id="exampleInputEmail1" placeholder="Entre your image" name="image">
@@ -72,7 +72,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Entre your name" name="email" >
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Entre your email" name="email" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">phone </label>
@@ -128,53 +128,13 @@
                             <td> <?php echo $val['Phone']; ?> </td>
                             <td> <?php echo $val['Enroll Number'];?></td>
                             <td> <?php echo $val['Date of admission'];?></td>
-                            <td>  <a href="edit.php?index=<?php echo $key; ?>" <button data-bs-toggle="modal" data-bs-target="#exampleModal2" class="fas fa-pen mx-4 "></button></a></td>
+                            <td>  <a href="edit.php?index=<?php echo $key; ?>" <i class="fas fa-pen mx-4 "></i></a></td>
                             <td>   <a href="delet.php?index=<?php echo $key; ?>" <i class="fas fa-trash   mx-4 "></i> </a></td>
                          
                             </tr>
                        
                        <?php endforeach; ?>
-                       <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter student</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form  action= "" method="get">
-      <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Image </label>
-            <input type="file" class="form-control" id="exampleInputEmail1" placeholder="Entre your image" name="image">
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Name </label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entre your name" name="name" >
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Entre your name" name="email" >
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">phone </label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entre your phone" name="phone" >
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Enroll Number</label>
-            <input type="text" class="form-control mb-4" placeholder="Entre your Enroll" id="exampleInputPassword1"   name="nb">
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Date of admission</label>
-            <input type="date" class="form-control mb-4" placeholder="Entre your date" id="exampleInputPassword1"  name="date">
-          </div>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" name="save">ADD NEW STUDENT</button>
-        </form>
-
-      </div>
-     
-    </div>
-  </div>
+    
 </div>
            
                             </tbody>
