@@ -1,4 +1,5 @@
-<?php  
+<?php 
+ if(isset($_GET['save'])) { 
         $json = file_get_contents('student.json');
         $student = json_decode($json, true);
   
@@ -18,7 +19,7 @@
 
   $en = json_encode($student,JSON_PRETTY_PRINT);
   file_put_contents('student.json',$en);
-
+ }
   ?>
 
 <!DOCTYPE html>
@@ -60,7 +61,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form  action= "students.php" method="get">
+      <form  action= "" method="get">
       <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Image </label>
             <input type="file" class="form-control" id="exampleInputEmail1" placeholder="Entre your image" name="image">
@@ -86,7 +87,7 @@
             <input type="date" class="form-control mb-4" placeholder="Entre your date" id="exampleInputPassword1"  name="date">
           </div>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">ADD NEW STUDENT</button>
+        <button type="submit" class="btn btn-primary" name="save">ADD NEW STUDENT</button>
         </form>
 
       </div>
@@ -113,8 +114,7 @@
                             </thead>
                             <tbody>
                                <?php
-                              
-                          
+
                             $fill =file_get_contents("student.json");
                           $st = json_decode($fill,true);
 
@@ -128,12 +128,55 @@
                             <td> <?php echo $val['Phone']; ?> </td>
                             <td> <?php echo $val['Enroll Number'];?></td>
                             <td> <?php echo $val['Date of admission'];?></td>
-                            <td><i class="fas fa-pen mx-4 "></i></td>
-                            <td> <i class="fas fa-trash   mx-4 "></i></td>
+                            <td>  <a href="edit.php?index=<?php echo $key; ?>" <button data-bs-toggle="modal" data-bs-target="#exampleModal2" class="fas fa-pen mx-4 "></button></a></td>
+                            <td>   <a href="delet.php?index=<?php echo $key; ?>" <i class="fas fa-trash   mx-4 "></i> </a></td>
                          
                             </tr>
                        
-            <?php endforeach; ?>
+                       <?php endforeach; ?>
+                       <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter student</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form  action= "" method="get">
+      <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Image </label>
+            <input type="file" class="form-control" id="exampleInputEmail1" placeholder="Entre your image" name="image">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name </label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entre your name" name="name" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email </label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Entre your name" name="email" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">phone </label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entre your phone" name="phone" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Enroll Number</label>
+            <input type="text" class="form-control mb-4" placeholder="Entre your Enroll" id="exampleInputPassword1"   name="nb">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Date of admission</label>
+            <input type="date" class="form-control mb-4" placeholder="Entre your date" id="exampleInputPassword1"  name="date">
+          </div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" name="save">ADD NEW STUDENT</button>
+        </form>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+           
                             </tbody>
                         </table>
                     </div>
