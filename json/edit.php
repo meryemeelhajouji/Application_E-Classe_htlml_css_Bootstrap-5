@@ -51,7 +51,7 @@
        
          
             <label for="exampleInputEmail1" class="form-label">Date of admission </label>
-            <input type="text" class="form-control mb-4"  placeholder="Entre your date" id="exampleInputPassword1"  name="date"  value="<?php echo $row['Date of admission']; ?>">
+            <input type="date" class="form-control mb-4"  placeholder="Entre your date" id="exampleInputPassword1"  name="date"  value="<?php echo $row['Date of admission']; ?>">
          
           <button type="submit"class="btn  btn-info w-100 text-white text-uppercase  " name="update"> 
             update

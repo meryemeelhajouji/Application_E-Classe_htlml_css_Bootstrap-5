@@ -15,7 +15,6 @@
 
   );
  
-// push('student.json',$student);//
 
   $en = json_encode($student,JSON_PRETTY_PRINT);
   file_put_contents('student.json',$en);
@@ -119,7 +118,7 @@
                           $st = json_decode($fill,true);
 
                               ?>
-                            <?php   foreach ($st as $key => $val) :    ?>
+                            <?php   foreach ($st as $key => $val) : ?>
                            <tr>   
                         
                             <td><img src=" <?php echo "upload".$val['img']; ?>" alt="user" style="width: 50px;"></td>
@@ -128,14 +127,14 @@
                             <td> <?php echo $val['Phone']; ?> </td>
                             <td> <?php echo $val['Enroll Number'];?></td>
                             <td> <?php echo $val['Date of admission'];?></td>
-                            <td>  <a href="edit.php?index=<?php echo $key; ?>" <i class="fas fa-pen mx-4 "></i></a></td>
-                            <td>   <a href="delet.php?index=<?php echo $key; ?>" <i class="fas fa-trash   mx-4 "></i> </a></td>
-                         
+                            <td>  <a href="edit.php?index=<?php echo $key; ?>"> <i class="fas fa-pen mx-4 "></i></a></td>
+                            <td>   <a href="delet.php?index=<?php echo $key; ?>"> <i class="fas fa-trash   mx-4 "></i> </a></td>
+                       
                             </tr>
                        
-                       <?php endforeach; ?>
+                         <?php endforeach; ?>
     
-</div>
+                          </div>
            
                             </tbody>
                         </table>
