@@ -120,6 +120,7 @@ require_once 'connection.php';
                                     $aff_student="select * from students ";
                                   $res = mysqli_query($conn,$aff_student);
                                  while($row = mysqli_fetch_assoc($res)){
+                                   
                                   ?>
                                        <tr>   
                         
