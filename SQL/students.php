@@ -51,11 +51,11 @@ require_once 'connection.php';
                 <div class="row ">
                     <div class=" d-flex justify-content-between my-3">
                         <h1 class="fs-4 ">Students List</h1>
-                        <div>
+                    <div>
                             <i class="fas fa-sort mx-3 text-info "></i>
                             <button type="button" class="btn btn-info text-white  " data-bs-toggle="modal" data-bs-target="#exampleModal">ADD NEW STUDENT</button>
 
-<!-- Modal -->
+
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -136,10 +136,7 @@ require_once 'connection.php';
                         </tr>
                                     
                                       
-                    <?php   } 
-                   
-                    
-                    ?>     
+                    <?php   }   ?>     
                             
            
                             </tbody>
