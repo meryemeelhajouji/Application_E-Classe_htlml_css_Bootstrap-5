@@ -31,11 +31,13 @@ require_once 'connection.php';
     $ins_student = "INSERT INTO students values ('','$image','$name','$email','$phone','$Enroll_Number','$Date_admission')";
 
        mysqli_query($conn,$ins_student);
+       header('location: students.php');
+   
 
     
  }
 
-   
+
 
   ?>
     <main>
@@ -136,7 +138,8 @@ require_once 'connection.php';
                         </tr>
                                     
                                       
-                    <?php   }   ?>     
+                    <?php   } 
+  ?>     
                             
            
                             </tbody>

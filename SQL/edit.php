@@ -78,7 +78,8 @@
     $Enroll_Number = $_POST["nb"] ;
     $Date_admission = $_POST["date"];
 
-    $edite_student ="UPDATE students SET image ='$image',name ='$name',email ='$email',phone ='$phone',enroll_number ='$Enroll_Number',date_admission ='$Date_admission' ";
+    $edite_student ="UPDATE students SET 
+    image ='$image',name ='$name',email ='$email',phone ='$phone',enroll_number ='$Enroll_Number',date_admission ='$Date_admission' WHERE id = '$id' ";
     mysqli_query($conn,$edite_student);
 
         header('location: students.php');

@@ -4,7 +4,7 @@ $username = "root";
 $password = "";
 $dataname ="e_classe_db";
 
-$conn = new mysqli($servername, $username, $password, $dataname);
+$conn = mysqli_connect($servername, $username, $password, $dataname);
 //CREATE DATABASE e_classe_db;
 
    /* $sql = "CREATE TABLE students(
@@ -33,5 +33,19 @@ $conn = new mysqli($servername, $username, $password, $dataname);
                       } else {
                         echo "Error creating table: " . $conn->error;
                       }
-                      */
+                     
+
+                       $sql = "CREATE TABLE courses(
+                id_cour int AUTO_INCREMENT  PRIMARY KEY ,
+                title varchar(255),
+                description varchar(255),
+                price  int
+             
+                    )";
+                    if ($conn->query($sql) === TRUE) {
+                        echo "Table MyGuests created successfully";
+                      } else {
+                        echo "Error creating table: " . $conn->error;
+                      }  */
+                     
            ?>
