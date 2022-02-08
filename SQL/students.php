@@ -126,7 +126,7 @@ require_once 'connection.php';
                                   ?>
                                        <tr>   
                         
-                        <td><img src=" <?php echo $row['image']; ?> alt="user" style="width: 50px;"></td>
+                        <td><img src="image/<?php echo $row['image']; ?>" alt="user" style="width: 50px;"></td>
                         <td> <?php echo $row['name']; ?></td>
                         <td> <?php echo $row['email'];?></td>
                         <td> <?php echo $row['phone']; ?> </td>
