@@ -34,13 +34,13 @@
      require_once 'connection.php';
      $stud = "SELECT COUNT(*) as stu FROM students ";
     $res =  mysqli_query($conn,$stud);
-   while($student = mysqli_fetch_assoc($res)) {
+   $student = mysqli_fetch_assoc($res);
 
    
 
 
     ?>
-                            <h1 class="fs-5 mt-5"><?php  echo $student['stu'] ; } ?></h1>
+                            <h1 class="fs-5 mt-5"><?php  echo $student['stu'] ;  ?></h1>
                         </div>
                     </div>
                     <div class="col-lg-3  col-md-5  mb-4 ">
@@ -51,16 +51,16 @@
                                 <p class="fs-5 mb-5 Secondary-text">Course</p>
                             </div>
                             <?php
-     require_once 'connection.php';
+    
      $stud = "SELECT COUNT(*) as cour FROM courses ";
     $res =  mysqli_query($conn,$stud);
-   while($student = mysqli_fetch_assoc($res)) {
+      $student = mysqli_fetch_assoc($res);
+  
 
-   
 
 
     ?>
-                            <h1 class="fs-5 mt-5"><?php  echo $student['cour'] ; } ?></h1>
+                            <h1 class="fs-5 mt-5"><?php  echo $student['cour'] ;  ?></h1>
                         </div>
                     </div>
                     <div class=" col-lg-3  col-md-5  mb-4">
@@ -71,16 +71,14 @@
                                 <p class="fs-5 mb-5 Secondary-text">Payments</p>
                             </div>
                             <?php
-     require_once 'connection.php';
-     $stud = "SELECT COUNT(*) as pay FROM payment_details ";
+    
+     $stud = "SELECT SUM(Amount_Paid) FROM payment_details ";
     $res =  mysqli_query($conn,$stud);
-   while($student = mysqli_fetch_assoc($res)) {
-
-   
+    $student = mysqli_fetch_assoc($res)
 
 
     ?>
-                            <h1 class="fs-5 mt-5">DH <?php  echo $student['pay'] ; } ?></h1>
+                            <h1 class="fs-5 mt-5">DH <?php  echo $student['SUM(Amount_Paid)'] ;  ?></h1>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-5  mb-4">

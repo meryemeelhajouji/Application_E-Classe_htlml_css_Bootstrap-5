@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,8 +26,7 @@ require_once 'connection.php';
     $Enroll_Number = $_POST["nb"] ;
     $Date_admission = $_POST["date"];
 
-    $ins_student = "INSERT INTO students values ('','$image','$name','$email','$phone','$Enroll_Number','$Date_admission')";
-
+      $ins_student = "INSERT INTO students(image , name , email , phone , enroll_number, date_admission  ) values ('$image','$name','$email','$phone','$Enroll_Number','$Date_admission')";
        mysqli_query($conn,$ins_student);
        header('location: students.php');
    
@@ -73,11 +70,11 @@ require_once 'connection.php';
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name </label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entre your name" name="name" >
+            <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="Entre your name" name="name" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Entre your email" name="email" >
+            <input type="email" class="form-control" id="exampleInputEmail1" required  placeholder="Entre your email" name="email" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">phone </label>
@@ -85,11 +82,11 @@ require_once 'connection.php';
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Enroll Number</label>
-            <input type="text" class="form-control mb-4" placeholder="Entre your Enroll" id="exampleInputPassword1"   name="nb">
+            <input type="text" class="form-control mb-4" placeholder="Entre your Enroll" required id="exampleInputPassword1"   name="nb">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Date of admission</label>
-            <input type="date" class="form-control mb-4" placeholder="Entre your date" id="exampleInputPassword1"  name="date">
+            <input type="date" class="form-control mb-4" placeholder="Entre your date" required id="exampleInputPassword1"  name="date">
           </div>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary" name="save">ADD NEW STUDENT</button>
@@ -157,6 +154,7 @@ require_once 'connection.php';
         toggleButton.onclick = function () {
             el.classList.toggle("toggled");
         };
+        
     </script>
     </main>
   
