@@ -1,6 +1,9 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +15,7 @@
 <body>
   <main>
      <div class="login d-flex justify-content-center align-items-center">
-      <div class="bg-white p-4 rounded-3 login_content ">
+      <div class="bg-white p-3   rounded-3 login_content ">
        
           <div class=" mb-4">
             <h1 class="border-start px-2 m-3 border-info border-5 fw-bold fs-3">
@@ -21,18 +24,32 @@
           </div>
           <div class=" text-center ">
             <h2 class="text-uppercase fs-5">sign in </h2>
-            <p class=" text-muted "> Enter your credentials to access your account</p>
+            <p class=" text-muted "> Enter your credentials to access your account</p>   
           </div>
-         <form  action="dashboard.php">
+    
+    
+     <?php 
+            if(isset($_SESSION['message_error'])){
+
+                echo "<div class='alert alert-danger' role='alert'>";
+                echo  $_SESSION["message_error"];
+              //  A simple danger alert—check it out!
+                echo "</div>";
+                $_SESSION["message_error"] = null;
+            }      
+     
+     ?>
+         <form  action="function.php"  method="POST">
+        
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Entre your email">
+            <label for="exampleInputEmail1" class="form-label">Name </label>
+            <input type="email" class="form-control  "id="exampleInputEmail1"  name="email_user"  placeholder="Entre your email">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control mb-4" placeholder="Entre your password" id="exampleInputPassword1">
+            <input type="password" class="form-control mb-4" name = "password"  placeholder="Entre your password" id="exampleInputPassword1">
           </div>
-          <button type="submit"class="btn  btn-info w-100 text-white text-uppercase  "> 
+          <button type="submit"class="btn  btn-info w-100 text-white text-uppercase  " name="login"> 
             sign in
           </button>
           <div class="mt-3 text-center">
