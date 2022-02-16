@@ -1,8 +1,9 @@
 <?php
 
 session_start();
+
 require_once 'connection.php';
-$remember = $_POST['remember'] ?? "";
+$remember = $_POST['remember'];
 if (isset($_POST['login'])){
 	if(empty($_POST['email_user']) || empty($_POST['password'])){
 	
