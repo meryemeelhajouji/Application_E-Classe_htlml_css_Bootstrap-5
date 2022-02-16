@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(isset($_SESSION['name_user'])){
+      header("location: dashboard.php");
+  }
 ?>
 
 <!DOCTYPE html>
@@ -41,14 +44,14 @@
      ?>
          <form  action="function.php"  method="POST">
         
-          <div class="mb-3">
+        
             <label for="exampleInputEmail1" class="form-label">Name </label>
-            <input type="email" class="form-control  "id="exampleInputEmail1"  name="email_user"  placeholder="Entre your email">
-          </div>
-          <div class="mb-3">
+            <input type="email" class="form-control  "id="exampleInputEmail1"  name="email_user" value="<?php echo $_COOKIE['email_user'] ?? "";?>" placeholder="Entre your email">
+         
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control mb-4" name = "password"  placeholder="Entre your password" id="exampleInputPassword1">
-          </div>
+            <input type="password" class="form-control mb-4" name = "password"  value="<?php echo $_COOKIE['password'] ?? "";?>" placeholder="Entre your password" id="exampleInputPassword1">
+          
+          <input type="checkbox" class="mb-4" name="remember" /> Remember me
           <button type="submit"class="btn  btn-info w-100 text-white text-uppercase  " name="login"> 
             sign in
           </button>
