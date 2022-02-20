@@ -45,7 +45,7 @@
          <form  action="function.php"  method="POST">
         
         
-            <label for="exampleInputEmail1" class="form-label">Name </label>
+            <label for="exampleInputEmail1" class="form-label">Email </label>
             <input type="email" class="form-control  "id="exampleInputEmail1"  name="email_user" value="<?php echo $_COOKIE['email_user'] ?? "";?>" placeholder="Entre your email">
          
             <label for="exampleInputPassword1" class="form-label">Password</label>

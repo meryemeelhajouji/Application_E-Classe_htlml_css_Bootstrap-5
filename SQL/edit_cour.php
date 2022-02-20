@@ -18,13 +18,13 @@
    $id = $_GET['id_cour'];
    $read_course = "SELECT * FROM courses WHERE id_cour = $id";
    $res = mysqli_query($conn,$read_course);
-    while ($row = mysqli_fetch_assoc($res)){
+    $row = mysqli_fetch_assoc($res);
 
    $title = $row['title'];
    $description = $row['description'];
    $price = $row['price'];
   
-    }
+    
 
    
   
@@ -52,7 +52,7 @@
             <label for="exampleInputEmail1" class="form-label">price </label>
             <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Entre your price" name="price"   value="<?php echo $price; ?>">
           
-          <button type="submit"class="btn  btn-info w-100 text-white text-uppercase  " name="update"> 
+          <button type="submit"class="btn  btn-info w-100 text-white text-uppercase  mt-3 " name="update"> 
             update
           </button>
         </form>
@@ -62,7 +62,7 @@
 
     $title = $_POST["title"] ;
     $description =$_POST["description"] ;
-    $price  =$_POST["price"] ;
+    $price =$_POST["price"] ;
 
     $edite_cour ="UPDATE courses SET 
     title ='$title',description ='$description',price ='$price'  WHERE id_cour = '$id' ";

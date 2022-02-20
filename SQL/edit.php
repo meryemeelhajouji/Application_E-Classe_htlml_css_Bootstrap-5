@@ -17,7 +17,7 @@
    $id = $_GET['id'];
    $read_student = "SELECT * FROM students WHERE id = $id";
    $res = mysqli_query($conn,$read_student);
-    while ($row = mysqli_fetch_assoc($res)){
+  $row = mysqli_fetch_assoc($res);
 
     $image = $row['image'];
    $name = $row['name'];
@@ -25,7 +25,7 @@
    $phone = $row['phone'];
    $nb = $row['enroll_number'];
    $datead = $row['date_admission'];
-    }
+    
 
    
   

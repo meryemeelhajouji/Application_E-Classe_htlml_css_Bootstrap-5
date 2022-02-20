@@ -62,13 +62,13 @@ if(!isset($_SESSION['name_user'])){
     
      $stud = "SELECT COUNT(*) as cour FROM courses ";
     $res =  mysqli_query($conn,$stud);
-      $student = mysqli_fetch_assoc($res);
+      $cours = mysqli_fetch_assoc($res);
   
 
 
 
     ?>
-                            <h1 class="fs-5 mt-5"><?php  echo $student['cour'] ;  ?></h1>
+                            <h1 class="fs-5 mt-5"><?php  echo $cours['cour'] ;  ?></h1>
                         </div>
                     </div>
                     <div class=" col-lg-3  col-md-5  mb-4">
@@ -80,8 +80,8 @@ if(!isset($_SESSION['name_user'])){
                             </div>
                             <?php
     
-     $stud = "SELECT SUM(Amount_Paid) FROM payment_details ";
-    $res =  mysqli_query($conn,$stud);
+     $cour = "SELECT SUM(Amount_Paid) FROM payment_details ";
+    $res =  mysqli_query($conn,$cour);
     $student = mysqli_fetch_assoc($res)
 
 
@@ -94,9 +94,20 @@ if(!isset($_SESSION['name_user'])){
                             <div>
                                 <i class="far fa-user fs-5  p-1"></i>
 
+                                <?php
+    
+    $user = "SELECT COUNT(*) as users FROM users ";
+   $res =  mysqli_query($conn,$user);
+     $users = mysqli_fetch_assoc($res);
+ 
+
+
+
+   ?>
+
                                 <p class="fs-5 mb-5 text-white">Users</p>
                             </div>
-                            <h1 class="fs-5 mt-5">3</h1>
+                            <h1 class="fs-5 mt-5"> <?php  echo $users['users'] ;  ?></h1>
                         </div>
                     </div>
                 </div>

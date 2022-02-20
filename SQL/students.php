@@ -136,14 +136,14 @@ require_once 'connection.php';
                         <td>   <a href="delet.php?id=<?php echo  $row['id']; ?>"> <i class="fas fa-trash   mx-4 "></i> </a></td>
                    
                         </tr>
-                                    
+                                  
                                       
                     <?php   } 
   ?>     
                             
            
                             </tbody>
-                        </table>
+                        </table>   
                     </div>
                       
                 </div>
