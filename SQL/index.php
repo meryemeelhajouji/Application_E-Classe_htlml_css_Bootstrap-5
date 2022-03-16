@@ -11,7 +11,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign in</title>
-  <link rel="stylesheet" href="css/sign_in.css">
+  <link rel="stylesheet" href="css/signin.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
  </head>
     
@@ -42,13 +42,13 @@
             }      
      
      ?>
-         <form  action="function.php"  method="POST">
+         <form  action="function.php"  method="POST"  onsubmit="return validation()">
         
-        
-            <label for="exampleInputEmail1" class="form-label">Email </label>
-            <input type="email" class="form-control  "id="exampleInputEmail1"  name="email_user" value="<?php echo $_COOKIE['email_user'] ?? "";?>" placeholder="Entre your email">
+            
+            <label >Email </label>
+            <input type="email" class="form-control  "id="email"  name="email_user" value="<?php echo $_COOKIE['email_user'] ?? "";?>" placeholder="Entre your email">
          
-            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <label >Password</label>
             <input type="password" class="form-control mb-4" name = "password"  value="<?php echo $_COOKIE['password'] ?? "";?>" placeholder="Entre your password" id="exampleInputPassword1">
           
           <input type="checkbox" class="mb-4" name="remember" /> Remember me
@@ -57,14 +57,15 @@
           </button>
           <div class="mt-3 text-center">
             <span class="text-muted">
-               Forgot your password? 
+          don't have  account
             </span>
-             <a class="text-info text-decoration-underline" href=""> <span>Reset Password</span></a> 
+             <a class="text-info text-decoration-underline" href="signup.php"> <span>Register</span></a> 
           </div>
         </form>
       </div>
     </div>
   </main>
+ 
 </body>
 
 </html>

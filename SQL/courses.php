@@ -44,15 +44,15 @@
                         <form action="" method="POST">
                           <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Title </label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entre your name" name="title">
+                            <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="Entre your name" name="title">
                           </div>
                           <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">description </label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entre your email" name="description">
+                            <input type="text" class="form-control" id="exampleInputEmail1" required  placeholder="Entre your email" name="description">
                           </div>
                           <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Price </label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entre your phone" name="price">
+                            <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="Entre your phone" name="price">
                           </div>
 
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

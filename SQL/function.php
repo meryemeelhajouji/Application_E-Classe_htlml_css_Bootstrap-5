@@ -2,7 +2,7 @@
 
 session_start();
 require_once 'connection.php';
-$remember = $_POST['remember'] ;
+
 if (isset($_POST['login'])){
 	if(empty($_POST['email_user']) || empty($_POST['password'])){
 	
@@ -14,12 +14,12 @@ if (isset($_POST['login'])){
 		
 		$email = $_POST['email_user'];
 		$password = $_POST['password'];
-		$req = "SELECT * FROM users WHERE email_user ='$email' and  password ='$password'";
+		$req = "SELECT * FROM users WHERE email_user ='$email' and  password='$password'";
 		$ex = mysqli_query($conn,$req);
 		$res = mysqli_fetch_assoc($ex);	
 			if($res){
 				$_SESSION['name_user'] = $res['name_user'];
-				if($remember == 'on'){
+				if(isset($_POST['remember'])){
 					setcookie("email_user", $_POST['email_user'],time() + 3600);
 					setcookie("password", $_POST['password'],time() + 3600);
 				}else{
@@ -35,9 +35,25 @@ if (isset($_POST['login'])){
 				header("location: index.php");
 			}
 	}
-}
+}	
+			$name = $_POST["name_user"] ;
+			$email =$_POST["email_user"] ;
+			$password = $_POST["password1"] ;
+			$conpassword = $_POST["password2"];
 
- 
+		if ($password != $conpassword){
+			$_SESSION["message_error"] = "confirme password ";	
+		}else{
+		if(isset($_POST['Signup'])) {
+		
+			$user = "INSERT INTO users(name_user , email_user , password ) values ('$name','$email','$password')";
+			mysqli_query($conn,$user);
+			header('location: signup.php');
+   
+		}
+		}
+
+
     
 
 
