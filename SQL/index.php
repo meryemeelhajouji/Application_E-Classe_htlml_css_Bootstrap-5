@@ -46,11 +46,11 @@
         
             
             <label >Email </label>
-            <input type="email" class="form-control  "id="email"  name="email_user" value="<?php echo $_COOKIE['email_user'] ?? "";?>" placeholder="Entre your email">
-         
+            <input type="email" class="form-control" id="email"  name="email_user" value="<?php echo $_COOKIE['email_user'] ?? "";?>" placeholder="Entre your email">
+            <span id="emailid" ></span>
             <label >Password</label>
-            <input type="password" class="form-control mb-4" name = "password"  value="<?php echo $_COOKIE['password'] ?? "";?>" placeholder="Entre your password" id="exampleInputPassword1">
-          
+            <input type="password" class="form-control mb-4" id="password"  name = "password"  value="<?php echo $_COOKIE['password'] ?? "";?>" placeholder="Entre your password" id="exampleInputPassword1">
+            <span id="passwordid" ></span>
           <input type="checkbox" class="mb-4" name="remember" /> Remember me
           <button type="submit"class="btn  btn-info w-100 text-white text-uppercase  " name="login"> 
             sign in
@@ -65,7 +65,7 @@
       </div>
     </div>
   </main>
- 
+  <script src="script.js"> </script>
 </body>
 
 </html>

@@ -13,6 +13,7 @@
     <title>Page Students</title>
 </head>
 
+
 <body>
 <?php 
 
@@ -132,12 +133,27 @@ require_once 'connection.php';
                         <td> <?php echo $row['phone']; ?> </td>
                         <td> <?php echo $row['enroll_number'];?></td>
                         <td> <?php echo $row['date_admission'];?></td>
-                        <td>  <a href="edit.php ?id=<?php echo  $row['id']; ?>"> <i class="fas fa-pen mx-4 "></i></a></td>
-                        <td>   <a href="delet.php?id=<?php echo  $row['id']; ?>"> <i class="fas fa-trash   mx-4 "></i> </a></td>
-                   
+                        <td>  <a href="edit.php ?id=<?php echo  $row['id']; ?>" > <i class="fas fa-pen mx-4 "></i></a></td>
+                       
+                   <td><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#modelsupp"> <i class="fas fa-trash   mx-4 "></i></button> </td>
                         </tr>
-                                  
-                                      
+                        <div class="modal fade" id="modelsupp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Students Suppression</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    YOU REALLY WANT TO DELETE THIS STUDENT ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">NO !</button>
+                    <a href=delet.php?id=<?php echo  $row['id']; ?>><button type="button" class="btn btn-success">YES, I'M SURE !</button></a>
+                </div>
+            </div>
+        </div>
+    </div>                      
                     <?php   } 
   ?>     
                             
@@ -161,6 +177,22 @@ require_once 'connection.php';
     </script>
     </main>
   
+
+    
+
+    <script>
+      let deleteModel = document.querySelector('#deleteModel')
+      let opendelletmodel = document.querySelector('.opendelletmodel')
+      let closedelletmodel = document.querySelector('.closedelletmodel')
+      deleteModel.addEventListener('click', e =>{
+        e.preventDefault(); 
+        opendelletmodel.classList.toggle('hidden')
+      })
+      closedelletmodel.addEventListener('click', e =>{
+        e.preventDefault(); 
+        opendelletmodel.classList.toggle('hidden')
+      })
+    </script>
 </body>
 
 </html>

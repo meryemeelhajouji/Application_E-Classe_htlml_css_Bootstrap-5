@@ -42,7 +42,7 @@
             }      
      
      ?>
-         <form  action="function.php"  id ="form" method="POST" onsubmit="return validation()">
+         <form  action="function.php"   method="POST" onsubmit="return validation()">
          
           <div class="form-group">
               <label >Username :</label>
