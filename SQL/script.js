@@ -4,21 +4,16 @@ function validation(){
  let email = document.getElementById('email').value;
  let password = document.getElementById('password').value;
  let conPassword = document.getElementById('Confirmpassword').value;
+ const mailformat = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*$/
+ 
+  
 
  if ( name == ""){
 
   document.getElementById('nameid').innerHTML=" ** Please fill the UserName field";
   document.getElementById('nameid').style.color="red";
   return false;
- } else{
-  
-  document.getElementById('nameid').innerHTML=" ** Validé";
-  document.getElementById('nameid').style.color="#0dca4c";
-  
- 
- 
- }
- if ((name.length <=2) || (name.length >= 20) ){
+ } else if ((name.length <=2) || (name.length >= 20) ){
   document.getElementById('nameid').innerHTML =" ** user name should be between 2 to 20 characters ";
   document.getElementById('nameid').style.color="red";
   
@@ -34,8 +29,9 @@ function validation(){
   document.getElementById('emailid').innerHTML = " ** Enter Email ID"
   document.getElementById('emailid').style.color="red";
   return false;
-}else if (email.indexOf('@') <= 0) {
-  document.getElementById('emailid').innerHTML = " **  @ Invalid Position"
+ 
+}else if (!email.match(mailformat)) {
+  document.getElementById('emailid').innerHTML = " **Format  Invalid"
     document.getElementById('emailid').style.color="red";
   return false;
 }else{

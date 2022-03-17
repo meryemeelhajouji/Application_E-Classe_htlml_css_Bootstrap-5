@@ -67,34 +67,40 @@ require_once 'connection.php';
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form  action= "" method="POST">
+      <form  action= "" method="POST" onsubmit="return valideStudent()">
       <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Image </label>
+            <label >Image </label>
             <input type="file" class="form-control" id="exampleInputEmail1" placeholder="Entre your image" name="image">
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Name </label>
-            <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="Entre your name" name="name" >
+            <label>Name </label>
+            <input type="text" class="form-control" id="name"  placeholder="Entre your name" name="name" >
+            <span id="nameid"></span> 
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" required  placeholder="Entre your email" name="email" >
+            <label>Email </label>
+            <input type="email" class="form-control" id="email"   placeholder="Entre your email" name="email" >
+            <span id="emailid"></span>  
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">phone </label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entre your phone" name="phone" >
+            <label>phone </label>
+            <input type="text" class="form-control" id="phone" placeholder="Entre your phone" name="phone" >
+            <span id="phoneid"></span> 
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Enroll Number</label>
-            <input type="text" class="form-control mb-4" placeholder="Entre your Enroll" required id="exampleInputPassword1"   name="nb">
+            <label>Enroll Number</label>
+            <input type="text" class="form-control mb-4" placeholder="Entre your Enroll"  id="Enrollnb"   name="nb">
+            <span id="EnrollnbId"></span> 
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Date of admission</label>
-            <input type="date" class="form-control mb-4" placeholder="Entre your date" required id="exampleInputPassword1"  name="date">
+            <label>Date of admission</label>
+            <input type="date" class="form-control mb-4" placeholder="Entre your date"  id="date"  name="date">
+            <span id="dateId"></span> 
           </div>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary" name="save">ADD NEW STUDENT</button>
-        </form>
+       
+      </form>
 
       </div>
      
@@ -149,7 +155,7 @@ require_once 'connection.php';
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">NO !</button>
-                    <a href=delet.php?id=<?php echo  $row['id']; ?>><button type="button" class="btn btn-success">YES, I'M SURE !</button></a>
+                    <a href="delet.php?id=<?php echo  $row['id']; ?>"><button type="button" class="btn btn-success">YES, I'M SURE !</button></a>
                 </div>
             </div>
         </div>
@@ -176,23 +182,11 @@ require_once 'connection.php';
         
     </script>
     </main>
-  
+  <script src="scriptStudent.js"> </Script>
 
     
 
-    <script>
-      let deleteModel = document.querySelector('#deleteModel')
-      let opendelletmodel = document.querySelector('.opendelletmodel')
-      let closedelletmodel = document.querySelector('.closedelletmodel')
-      deleteModel.addEventListener('click', e =>{
-        e.preventDefault(); 
-        opendelletmodel.classList.toggle('hidden')
-      })
-      closedelletmodel.addEventListener('click', e =>{
-        e.preventDefault(); 
-        opendelletmodel.classList.toggle('hidden')
-      })
-    </script>
+ 
 </body>
 
 </html>

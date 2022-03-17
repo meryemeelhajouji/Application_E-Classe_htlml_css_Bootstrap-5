@@ -41,14 +41,15 @@ if (isset($_POST['login'])){
 			$password = $_POST["password1"] ;
 			$conpassword = $_POST["password2"];
 
-		if ($password != $conpassword){
+			if ($password != $conpassword){
 			$_SESSION["message_error"] = "confirme password ";	
-		}else{
-		if(isset($_POST['Signup'])) {
-		
+			}else{
+			if(isset($_POST['Signup'])) {
+
 			$user = "INSERT INTO users(name_user , email_user , password ) values ('$name','$email','$password')";
 			mysqli_query($conn,$user);
 			header('location: signup.php');
+
    
 		}
 		}
